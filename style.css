@@ -1,0 +1,519 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    color: white;
+    background: #849d8f url('images/ice-creams1.png') center 0 no-repeat;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.screen-reader-text {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: 1146px;
+    margin: 0 auto;
+}
+
+.orange-button {
+    background-image: linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
+    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+    text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+    text-align: center;
+    color: white;
+    border-width: 0;
+    border-radius: 15%/60%;
+    font-weight: bold;
+}
+
+.border-radius-box {
+    box-sizing: border-box;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+
+.underline {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 57px;
+    padding-top: 15px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.main-nav {
+    margin-bottom: 10px;
+    margin-left: 20px;
+    display: flex;
+}
+
+.main-nav a {
+    margin-right: 30px;
+}
+
+.main-nav a:last-child {
+    margin-right: 0;
+}
+
+.main-buttons {
+    display: flex;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.main-button {
+    text-align: center;
+    margin-left: 10px;
+    padding: 7px 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-width: 0;
+    border-radius: 20%/50%;
+}
+
+.search {
+    margin-left: 0;
+    font-size: 0;
+    background-image: url('images/lope.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    width: 35px;
+}
+
+.log-in::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 21px;
+    height: 19px;
+    margin-right: 5px;
+    background: transparent url('images/log-in.png') no-repeat;
+}
+
+.bag::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 21px;
+    height: 20px;
+    margin-right: 5px;
+    background: transparent url('images/bag.png') no-repeat;
+}
+
+.header-contacts {
+    position: absolute;
+    font-size: 14px;
+    text-align: right;
+    bottom: -50px;
+    right: 0;
+}
+
+.header-contacts span {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* preview */
+
+.preview-title {
+    font-size: 60px;
+    margin: 0;
+    font-weight: bold;
+    line-height: 60.35px;
+    text-align: center;
+    padding-top: 320px;
+}
+
+.preview-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 30px;
+}
+
+.preview-controls {
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.preview-control {
+    padding: 0;
+    margin: 0;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: transparent;
+}
+
+.preview-control_active {
+    background-color: white;
+}
+
+.preview-button {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 44px;
+    padding: 10px 30px;
+}
+
+.special-for-design {
+    width: 50px;
+}
+
+/* discounts */
+
+.discounts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.discount-item {
+    width: 560px;
+    height: 230px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.discount-item:first-of-type {
+    background: #91244a url('images/strap.jpg') center no-repeat;
+}
+
+.discount-item:last-of-type {
+    background: #624646 url('images/choco.jpg') center no-repeat;
+}
+
+.discount-title {
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 41px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.discount-desc {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.discount-btn {
+    font-size: 18px;
+    text-decoration: none;
+    padding: 13px 21px;
+}
+
+/* hits */
+
+.hits {
+    margin-top: 35px;
+}
+
+.hits-item {
+    width: 267px;
+    position: relative;
+    text-align: center;
+}
+
+.hits-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hits-item img {
+    border-radius: 50%;
+}
+
+.hit::before {
+    content: '';
+    position: absolute;
+    width: 61px;
+    height: 61px;
+    border-radius: 50%;
+    background: white url('images/hit.png') center no-repeat;
+}
+
+.hits-price {
+    font-size: 45px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+}
+
+.hits-price span {
+    font-size: 30px;
+}
+
+/* about */
+
+.about {
+    background: white url('images/waffle.jpg') no-repeat;
+    color: #323232;
+    padding: 30px 20px 10px 20px;
+    margin-top: 35px;
+}
+
+.about-title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.about-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about-item {
+    width: 485px;
+    margin-left: 55px;
+}
+
+.about-list li::before {
+    content: '';
+    position: absolute;
+    width: 49px;
+    height: 49px;
+    background: transparent no-repeat;
+}
+
+.about-list li:nth-of-type(1)::before {
+    background-image: url('images/ice\ cream.png');
+}
+
+.about-list li:nth-of-type(2)::before {
+    background-image: url('images/cow.png');
+}
+
+.about-list li:nth-of-type(3)::before {
+    background-image: url('images/list.png');
+}
+
+.about-list li:nth-of-type(4)::before {
+    background-image: url('images/thermo.png');
+}
+
+/* cards */
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.news {
+    width: 560px;
+    height: 220px;
+    background: white url('images/ice-cream-backg.jpg') no-repeat;
+    color: #323232;
+}
+
+.news h2 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.news a {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 30px;
+    color: #323232;
+}
+
+.form-email {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 560px;
+    height: 220px;
+    padding: 40px 25px;
+    background: white url('images/email.png') no-repeat;
+    color: #5a5a5a;
+}
+
+.form-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+#email {
+    border: 1px solid #b2b2b2;
+    box-sizing: border-box;
+    width: 365px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.submit-button {
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 20%/60%;
+}
+
+/* map */
+
+.map {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 40px;
+    width: 100%;
+    height: 430px;
+    background: transparent url('images/map.jpg') center no-repeat;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 305px;
+    box-sizing: border-box;
+    padding: 30px 25px;
+    margin-top: 60px;
+    margin-right: 40px;
+    background-color: white;
+    color: #323232;
+}
+
+.address p {
+    margin: 0
+}
+
+.map-button {
+    padding: 10px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    border-radius: 10%/60%;
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.socials {
+    display: flex;
+}
+
+.socials li {
+    width: 32px;
+    height: 32px;
+    font-size: 0;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.socials li:nth-of-type(1) {
+    background: transparent url('images/tw.png') center no-repeat;
+}
+
+.socials li:nth-of-type(2) {
+    background: transparent url('images/inst.png') center no-repeat;
+}
+
+.socials li:nth-of-type(3) {
+    background: transparent url('images/fb.png') center no-repeat;
+}
+
+.socials li:nth-of-type(4) {
+    margin-right: 0;
+    background: transparent url('images/vk.png') center no-repeat;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    height: 50px;
+}
+
+.footer-menu li {
+    margin-right: 25px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.footer-menu li:first-of-type {
+    font-weight: bold;
+}
+
+.heart::before {
+    content: '';
+    width: 15px;
+    height: 13px;
+    position: absolute;
+    top: 2px;
+    left: -20px;
+    background: transparent url('images/heart.png') center no-repeat;
+}
+
+.footer-logo {
+    font-size: 0;
+    width: 108px;
+    height: 39px;
+    background: transparent url('images/logo-htmlacademy-small.png') no-repeat;
+}
+
+.copy {
+    font-size: 12px;
+    line-height: 18px;
+
+}
