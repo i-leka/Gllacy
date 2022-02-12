@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="first-body">
     <header>
         <div class="container">
             <div class="header-left">
@@ -52,7 +52,7 @@
                     </form>
                 </div>
                 <div class="buttons-containers basket-container">
-                    <a href="#" class="main-button basket filled-basket">Пусто</a>
+                    <a href="#" class="main-button basket">Пусто</a>
                     <form method="post" class="basket-form drop-down-menu drop-down-menu-right">
                         <table class="basket-table">
                             <tr>
@@ -85,15 +85,15 @@
             <h1 class="screen-reader-text">Магазин Глейси</h1>
             <section class="preview">
                 <h2 class="screen-reader-text">Виды мороженого</h2>
-                <p class="preview-title">Крем-брюле и пломбир<br>
+                <p class="preview-title preview-title-opacity">Крем-брюле и пломбир<br>
                     с малиновым джемом
                 </p>
                 <div class="preview-bottom">
-                    <div class="preview-controls">
-                        <button type="button" class="preview-control preview-control_active"></button>
-                        <button type="button" class="preview-control"></button>
-                        <button type="button" class="preview-control"></button>
-                    </div>
+                    <ul class="preview-controls">
+                        <li><button type="button" class="preview-control preview-control_active"></button></li>
+                        <li><button type="button" class="preview-control"></button></li>
+                        <li><button type="button" class="preview-control"></button></li>
+                    </ul>
                     <button type="button" class="orange-button preview-button">Давайте оба!</button>
                     <div class="special-for-design"></div>
                 </div>
@@ -213,7 +213,8 @@
             <div class="container">
                 <article class="address border-radius-box">
                     <p>Адрес главного офиса и офлайн-магазина: <br>
-                        <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+                        <a href="https://yandex.ru/maps/-/CCU5yPDb8B" class="underline-black">ул. Большая Конюшенная
+                            19/8, Санкт-Петербург</a>
                     </p>
                     <p>Для заказов по телефону:<br>
                         <b>8 812 450-25-25</b><br>
@@ -241,11 +242,26 @@
             <div>
                 <div class="footer-logo">Логотип html academy</div>
                 <p class="copy">
-                    Сделано в <a href="#" class="underline-white">HTML Academy </a>&copy; 2019
+                    Дизайн: <a href="#" class="underline-white">HTML Academy </a>&copy; 2019
                 </p>
             </div>
         </footer>
     </div>
+    <section class="feedback-container">
+        <form method="post" class="feedback-form">
+            <div class="feedback-top">
+                <p>Мы обязательно вам ответим!</p>
+                <div class="feedback-close"></div>
+            </div>
+            <input type="text" id="feedback-name" placeholder="Имя Фамилия">
+            <input type="email" name="feedback-email" id="feedback-email" placeholder="email@example.com">
+            <textarea name="feedback-text" id="feedback-text" cols="30" rows="10"
+                placeholder="В свободной форме"></textarea>
+            <button type="submit" class="orange-button feedback-button">Отправить</button>
+        </form>
+    </section>
+    <script src="scripts/feedback.js"></script>
+    <script src="scripts/preview.js"></script>
 </body>
 
 </html>

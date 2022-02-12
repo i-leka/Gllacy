@@ -6,12 +6,26 @@ body {
     font-size: 16px;
     line-height: 22px;
     color: white;
+    background-color: #849d8f;
+    transition: all 0.5s linear;
+}
+
+.first-body {
     background: #849d8f url('images/ice-creams1.png') center 0 no-repeat;
+}
+
+.second-body {
+    background: #8996a6 url('images/ice-creams2.png') center 0 no-repeat;
+}
+
+.third-body {
+    background: #9d8b84 url('images/ice-creams3.png') center 0 no-repeat;
 }
 
 *, *::before, *::after {
     box-sizing: inherit;
     font: inherit;
+    transition: all 0.1s linear;
 }
 
 ul {
@@ -67,7 +81,7 @@ button {
 .drop-down-menu {
     display: none;
     position: absolute;
-    margin-top: 3px;
+    margin-top: 1px;
     color: #323232;
     font-size: 13px;
     line-height: 16px;
@@ -340,9 +354,14 @@ header .container {
     color: #323232;
 }
 
-.filled-basket .basket::before {
+.filled-basket::before {
     /* background-image: url('images/black-basket.png'); */
     content: url('images/black-basket.png');
+    display: inline-block;
+    vertical-align: middle;
+    width: 21px;
+    height: 20px;
+    margin-right: 5px;
 }
 
 .basket-form {
@@ -358,7 +377,7 @@ header .container {
     border-bottom: 1px solid #cacac7;
 }
 
-.basket-table td{
+.basket-table td {
     padding: 5px 0;
 }
 
@@ -423,6 +442,12 @@ header .container {
     line-height: 60.35px;
     text-align: center;
     padding-top: 320px;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+
+.preview-title-opacity {
+    opacity: 1;
 }
 
 .preview-bottom {
@@ -653,7 +678,7 @@ header .container {
 .news a {
     font-size: 24px;
     font-weight: bold;
-    line-height: 24px;
+    line-height: 30px;
     border-bottom: 2px solid rgb(50, 50, 50);
 }
 
@@ -717,8 +742,13 @@ header .container {
     color: #323232;
 }
 
-.address p {
+.address p{
     margin: 0
+}
+
+.address a{
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .map-button {
@@ -743,29 +773,39 @@ footer {
 }
 
 .socials li {
+    box-sizing: content-box;
     width: 32px;
     height: 32px;
     font-size: 0;
     border-radius: 50%;
     margin-right: 10px;
+    opacity: 80%;
     border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .socials li:nth-of-type(1) {
-    background: transparent url('images/tw.png') center no-repeat;
+    background: url('images/tw.png') center no-repeat;
 }
 
 .socials li:nth-of-type(2) {
-    background: transparent url('images/inst.png') center no-repeat;
+    background: url('images/inst.png') center no-repeat;
 }
 
 .socials li:nth-of-type(3) {
-    background: transparent url('images/fb.png') center no-repeat;
+    background: url('images/fb.png') center no-repeat;
 }
 
 .socials li:nth-of-type(4) {
     margin-right: 0;
-    background: transparent url('images/vk.png') center no-repeat;
+    background: url('images/vk.png') center no-repeat;
+}
+
+.socials li:hover {
+    opacity: 100%;
+}
+
+.socials li:active {
+    opacity: 60%;
 }
 
 .footer-menu {
@@ -808,4 +848,99 @@ footer {
     font-size: 12px;
     line-height: 18px;
 
+}
+
+/* Форма обратной связи */
+
+.feedback-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    width: 475px;
+    height: 445px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 25px;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+    color: #323232;
+    background: #f8f7f4;
+    border-radius: 10px;
+}
+
+.feedback-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.feedback-close {
+    cursor: pointer;
+    width: 18px;
+    height: 17px;
+    background: url('images/fb-cross.png') center no-repeat;
+}
+
+.feedback-form input, .feedback-form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    border: 1px solid #d3d3d2;
+    border-radius: 5px;
+}
+
+.feedback-form input {
+    width: 265px;
+}
+
+.feedback-form textarea {
+    align-self: stretch;
+}
+
+.feedback-form p {
+    margin-top: 0;
+}
+
+.feedback-button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.display-block {
+    display: block;
+}
+
+@keyframes error {
+    0% {
+        box-shadow: none;
+    }
+
+    50% {
+        box-shadow: 0 0 20px red;
+    }
+
+    100% {
+        box-shadow: none;
+    }
+}
+
+.feedback-error {
+    animation-name: error;
+    animation-duration: 0.6s;
 }
